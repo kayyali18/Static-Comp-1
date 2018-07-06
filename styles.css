@@ -1,12 +1,4 @@
-h1 {
-  font-size: 48px;
-}
-
-
-
-/* ----------------- Layout -----------------  */
-
-
+/*  ----------- Base ----------- */
 
 * {
   box-sizing: border-box;
@@ -14,72 +6,30 @@ h1 {
   padding: 0;
 }
 
-
-.container-2 {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas:
-  "box-10 box-10 box-11 box-3 box-3"
-  "box-12 box-13 box-14 box-3 box-3"
-  "box-15 box-16 box-17 box-3 box-3";
-
-  background-color: red;
-  height: 49rem;
-  min-width: 100%;
-  position: absolute;
-  top: 0;
-  padding: 0;
-  z-index: -3;
-}
-
-.container-2::before {
-  clear: both;
+h1 {
+  font-size: 48px;
 }
 
 
-.box-10 {
-  grid-area: box-10;
-  line-height: 1.5s;
-  padding: 3rem 1rem;
-  text-align: left;
-  border: 2px solid yellow;
+/* --------- Theme ------------- */
+
+
+div {
+  color: #442E25;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.4rem;
+  padding-top: 3rem;
+  text-align: center;
 }
 
-.box-11 {
-  background-color: #292E4D;
-  grid-area: box-11;
+.white-font {
+  color: white;
 }
 
-.box-12 {
-  background-color: #D8C3A2;
-  grid-area: box-12;
-}
 
-.box-13 {
-  background-color: #442E25;
-  grid-area: box-13;
-}
 
-.box-14 {
-  background-color: #292E4D;
-  grid-area: box-14;
-}
+/* ----------------- Layout -----------------  */
 
-.box-15 {
-  background-color: #3D4736;
-  grid-area: box-15;
-}
-
-.box-16 {
-  background-color: #ECEBE4;
-  grid-area: box-16;
-}
-
-.box-17 {
-  background-color: #292E4D;
-  grid-area: box-17;
-}
 
 .container {
   display: grid;
@@ -101,9 +51,8 @@ h1 {
   /* grid-gap: rows columns */
 }
 
-
 .box-1 {
-  background-color: #755449;
+  background-color: #71473e;
   color: #F7F7FF;
   font-family: 'Oxygen', sans-serif;
   grid-area: box-1;
@@ -115,7 +64,7 @@ h1 {
 }
 
 .box-2 {
-  background-color: #3D4736;
+  background-color: #061826;
   grid-area: box-2;
   transition: all .5s;
 }
@@ -130,6 +79,7 @@ h1 {
   background-size: cover;
   grid-area: box-3;
 }
+
 .box-4 {
   background-color: #442E25;
   grid-area: box-4;
@@ -181,7 +131,7 @@ h1 {
 }
 
 .box-9 {
-  background-color: #3D4736;
+  background-color: #71473e;
   grid-area: box-9;
   transition: all .5s;
 }
@@ -191,19 +141,61 @@ h1 {
 }
 
 
-div {
-  font-family: 'Oxygen', sans-serif;
-  font-size: 1.4rem;
-  color: #442E25;
-  padding-top: 3rem;
-  text-align: center;
+@media (max-width: 1100px), (orientation: portrait) {
+  .container {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 2fr) 2fr;
+    grid-template-areas:
+    "box-1 box-1 box-3"
+    "box-2 box-4 box-3"
+    "box-5 box-6 box-3"
+    "box-7 box-9 box-3"
+    "box-8 box-8 box-3";
+
+    height: 49rem;
+
+
 }
 
-.white-font {
-  color: white;
+@media (max-width: 500px), (orientation: portrait) {
+  .container {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+    "box-1"
+    "box-2"
+    "box-4"
+    "box-5"
+    "box-6"
+    "box-7"
+    "box-8"
+    "box-9";
+
+    height: 49rem;
+
+
+
+  }
+
+  div {
+    padding-top: 0rem;
+    text-align: center;
+  }
+
+  div p {
+    display: inline-block;
+    font-size: 28px;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  div i {
+    font-size: 2rem;
+    margin-left: 20rem;
+  }
 }
 
-div p:nth-of-type(2n){
-  position: relative;
-  top: 19rem;
-}
+
+/*  -------------- States ------------- */
