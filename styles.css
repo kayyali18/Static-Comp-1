@@ -10,21 +10,17 @@ h1 {
   font-size: 48px;
 }
 
-
-/* --------- Theme ------------- */
-
+body {
+  font-family: 'Oxygen', sans-serif;
+}
 
 div {
-  color: #442E25;
-  font-family: 'Oxygen', sans-serif;
-  font-size: 1.4rem;
-  padding-top: 3rem;
-  text-align: center;
+
+
 }
 
-.white-font {
-  color: white;
-}
+
+
 
 
 
@@ -40,7 +36,7 @@ div {
   "box-4 box-5 box-6 box-3 box-3"
   "box-7 box-8 box-9 box-3 box-3";
 
-  height: 49rem;
+  height: 45rem;
 
 
   /* grid-template-columns: minmax(200px, 1fr) repeat(3, 1fr);
@@ -50,6 +46,8 @@ div {
 
   /* grid-gap: rows columns */
 }
+
+
 
 .box-1 {
   background-color: #71473e;
@@ -69,10 +67,6 @@ div {
   transition: all .5s;
 }
 
-.box-2:hover {
-  margin-right: 1rem;
-}
-
 .box-3 {
   background-image: url('https://glossy.espreso.rs/files/2013/09/profimedia_0094858521_889145477.jpg');
   background-position: center;
@@ -86,59 +80,70 @@ div {
   transition: all .5s;
 }
 
-.box-4:hover {
-  margin-left: 1rem;
-}
-
 .box-5 {
   background-color: #D8C3A2;
   grid-area: box-5;
-  transition: all .5s;
-}
-
-.box-5:hover {
-  margin-right: 1rem;
 }
 
 .box-6 {
   background-color: #3D4736;
   grid-area: box-6;
-  transition: all .5s;
-}
-
-.box-6:hover {
-  margin-right: 1rem;
 }
 
 .box-7 {
   background-color: #ECEBE4;
   grid-area: box-7;
-  transition: all .5s;
-}
-
-.box-7:hover {
-  margin-left: 1rem;
 }
 
 .box-8 {
   background-color: #292E4D;
   grid-area: box-8;
-  transition: all .5s;
-}
-
-.box-8:hover {
-  margin-right: 1rem;
 }
 
 .box-9 {
   background-color: #71473e;
   grid-area: box-9;
-  transition: all .5s;
 }
 
-.box-9:hover {
-  margin-right: 1rem;
+/*  ------------ Modules ------------------ */
+
+.standard-box {
+  font-size: 1.4rem;
+  padding-top: 3rem;
+  text-align: center;
+  transition: all 0.5s;
 }
+
+.standard-box i {
+  font-size: 2rem;
+  padding: 1.8rem;
+}
+
+.white-font {
+  color: white;
+}
+
+/*  -------------- States ------------- */
+
+.title-icon:hover {
+  -webkit-animation: shake .5s steps(5 ,end) 1;
+          animation: shake .5s steps(5 ,end) 1;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  35%, 90% {
+    transform: rotate(5deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+/* .standard-box p:hover {
+  transform: scale(1.2)
+} */
 
 
 @media (max-width: 1100px), (orientation: portrait) {
@@ -155,7 +160,7 @@ div {
 
     height: 49rem;
 
-
+  }
 }
 
 @media (max-width: 500px), (orientation: portrait) {
@@ -179,7 +184,12 @@ div {
 
   }
 
-  div {
+  .title-icon:hover {
+    animation: none;
+    cursor: pointer;
+  }
+
+  /* div {
     padding-top: 0rem;
     text-align: center;
   }
@@ -194,8 +204,5 @@ div {
   div i {
     font-size: 2rem;
     margin-left: 20rem;
-  }
+  } */
 }
-
-
-/*  -------------- States ------------- */
