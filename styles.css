@@ -65,6 +65,7 @@ body {
   background-image: url('https://glossy.espreso.rs/files/2013/09/profimedia_0094858521_889145477.jpg');
   background-position: center;
   background-size: cover;
+  display: flex;
   grid-area: box-3;
 }
 
@@ -100,6 +101,17 @@ body {
 }
 
 /*  ------------ Modules ------------------ */
+
+.arrow-btn {
+  background-color: white;
+}
+
+.connect-me {
+  border: 2px solid white;
+  height: 40px;
+  margin: 5px 15px 0 0;
+  padding: 10px;
+}
 
 .standard-box {
   font-size: 1.4rem;
@@ -159,17 +171,6 @@ body {
   grid-area: box-9;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @keyframes shake {
   35%, 90% {
     transform: rotate(5deg);
@@ -179,11 +180,6 @@ body {
     transform: rotate(-5deg);
   }
 }
-
-/* .standard-box p:hover {
-  transform: scale(1.2)
-} */
-
 
 @media (max-width: 1100px), (orientation: portrait) {
   .container {
@@ -199,6 +195,10 @@ body {
 
     height: 49rem;
 
+  }
+
+  .connect-me {
+    display: none !important;
   }
 }
 
