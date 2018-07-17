@@ -103,7 +103,11 @@ body {
 /*  ------------ Modules ------------------ */
 
 .arrow-btn {
-  background-color: white;
+  /* background-color: white; */
+  align-items: center;
+  display: flex !important;
+  font-size: 40px;
+  width: 100%;
 }
 
 .connect-me {
@@ -111,6 +115,27 @@ body {
   height: 40px;
   margin: 5px 15px 0 0;
   padding: 10px;
+}
+
+.fa-chevron-circle-left:before {
+  left: 1rem;
+  position: relative;
+}
+
+.fa-chevron-circle-left {
+  color: rgba(98, 101, 95, 0.72)
+}
+
+.fa-chevron-circle-right:before {
+  right: 1rem;
+  position: absolute;
+
+}
+
+.fa-chevron-circle-right {
+  color: rgba(98, 101, 95, 0.72);
+  display: block;
+  float: right;
 }
 
 .standard-box {
@@ -130,6 +155,11 @@ body {
 }
 
 /*  -------------- States ------------- */
+
+.arrow-btn:hover {
+  color: rgba(107, 122, 81, 0.87);
+  cursor: pointer;
+}
 
 .title-icon:hover {
   -webkit-animation: shake .5s steps(5 ,end) 1;
@@ -218,6 +248,7 @@ body {
     "box-9";
 
     height: 49rem;
+    width: 110%;
 
 
 
@@ -227,6 +258,7 @@ body {
     animation: none;
     cursor: pointer;
   }
+
 
   /* div {
     padding-top: 0rem;
